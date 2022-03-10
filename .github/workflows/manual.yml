@@ -1,11 +1,7 @@
 name: Testing a Manual dispatch
 
 on:
-  workflow_dispatch:
-    inputs:
-      release:
-        description: some random text for testing
-        type: string
+  push:
 
 jobs:
   release:
@@ -14,7 +10,6 @@ jobs:
     steps:
       - name: "Checkout"
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: "Prepare Files For Release"
-        run: echo ${{ inputs.release }}
+
+      - name: "echo an input"
+        run: echo ''
