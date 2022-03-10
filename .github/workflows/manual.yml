@@ -6,7 +6,6 @@ on:
       release:
         description: some random text for testing
         type: string
-        required: true
 
 jobs:
   release:
