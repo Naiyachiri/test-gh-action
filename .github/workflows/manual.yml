@@ -1,7 +1,12 @@
-name: Create New Release
+name: Testing a Manual dispatch
 
 on:
   workflow_dispatch:
+    inputs:
+      release:
+        description: some random text for testing
+        type: string
+        required: true
 
 jobs:
   release:
@@ -13,4 +18,4 @@ jobs:
         with:
           fetch-depth: 0
       - name: "Prepare Files For Release"
-        run: echo ${{ inputs.release-version }}
+        run: echo ${{ inputs.release }}
