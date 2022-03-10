@@ -15,3 +15,6 @@ jobs:
 
     - name: Setup upterm session
       uses: lhotari/action-upterm@v1
+
+    - name: make test file
+      run: touch test
