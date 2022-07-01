@@ -1,0 +1,22 @@
+name: Documents Build Exception
+
+on:
+  push:
+    paths:
+      - '*.md'
+      - 'docs/*.md'
+      - 'docs/adr/*.md'
+      # - '**/*(.md)+'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: "Docs only detected!"
+        run: echo "Docs only detected!"

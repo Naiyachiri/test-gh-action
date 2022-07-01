@@ -1,0 +1,20 @@
+name: Continuous Integration
+
+on:
+  push:
+    paths-ignore:
+      - "*.md"
+      - "docs/**"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: "Running CI Workflow!"
+        run: echo ${{ inputs.release-version }}
