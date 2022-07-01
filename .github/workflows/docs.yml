@@ -9,7 +9,7 @@ on:
       # - '**/*(.md)+'
 
 jobs:
-  release:
+  docs-only:
     runs-on: ubuntu-latest
 
     steps:
