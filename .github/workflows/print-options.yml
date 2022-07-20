@@ -27,6 +27,6 @@ jobs:
     steps:
       - name: Echo Input Parameters
         run: |
-          echo "Branch: ${{ GITHUB_REF#refs/heads/ }}"
-          echo "Environment: ${ github.event.inputs.environment }"
-          echo "AWS Region: ${ github.event.inputs.aws-region }"
+          echo "Triggering Branch: ${GITHUB_REF#refs/heads/}"
+          echo "Environment: ${{ github.event.inputs.environment }}"
+          echo "AWS Region: ${{ github.event.inputs.aws-region }}"
