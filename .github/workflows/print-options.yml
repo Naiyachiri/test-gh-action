@@ -1,0 +1,32 @@
+name: Manual Option Print
+
+# Controls when the workflow will run
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Environment
+        options: [ '1', '2', '3']
+        default: '1'
+        required: true
+      aws-region:
+        description: Region
+        options: [ 'a', 'b']
+        required: true
+        default: 'a'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Echo Input Parameters
+        run: |
+          echo "Branch: ${{ GITHUB_REF#refs/heads/ }}"
+          echo "Environment: ${ github.event.inputs.environment }"
+          echo "AWS Region: ${ github.event.inputs.aws-region }"
