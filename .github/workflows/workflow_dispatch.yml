@@ -19,34 +19,34 @@ env:
 
 jobs:
   regression_test1:
-    if:  ${{ inputs.regression_environment }} === 'test1'
+    if: inputs.regression_environment == 'test1'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-    - name: Echo env variable
-      id: target-branch
-      run: |
-        echo "Environment - ${{ github.event.inputs.regression_environment}}"
-        echo "${{ github.event.inputs.regression_environment}}"
+      - name: Echo env variable
+        id: target-branch
+        run: |
+          echo "Environment - ${{ github.event.inputs.regression_environment}}"
+          echo "${{ github.event.inputs.regression_environment}}"
 
   regression_test2:
-    if:  ${{ inputs.regression_environment }} === 'test2'
+    if: inputs.regression_environment == 'test2'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-    - name: Echo env variable
-      id: target-branch
-      run: |
-        echo "Environment - ${{ github.event.inputs.regression_environment}}"
-        echo "${{ github.event.inputs.regression_environment}}"
+      - name: Echo env variable
+        id: target-branch
+        run: |
+          echo "Environment - ${{ github.event.inputs.regression_environment}}"
+          echo "${{ github.event.inputs.regression_environment}}"
 
   regression_test3:
-    if:  ${{ inputs.regression_environment }} === 'test3'
+    if: inputs.regression_environment == 'test3'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-    - name: Echo env variable
-      id: target-branch
-      run: |
-        echo "Environment - ${{ github.event.inputs.regression_environment}}"
-        echo "${{ github.event.inputs.regression_environment}}"
+      - name: Echo env variable
+        id: target-branch
+        run: |
+          echo "Environment - ${{ github.event.inputs.regression_environment}}"
+          echo "${{ github.event.inputs.regression_environment}}"
