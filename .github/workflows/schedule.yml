@@ -1,20 +1,20 @@
 # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
 
-name: Nightly Regression Test against Stage
+# name: Nightly Regression Test against Stage
 
-on:
-  schedule:
-    # every 30 minutes at 10am (RUNS AGAINST UTC)
-    - cron: '45 14 * * *'
+# on:
+#   schedule:
+#     # every 30 minutes at 10am (RUNS AGAINST UTC)
+#     - cron: '45 14 * * *'
 
-jobs:
-  regression:
-    runs-on: ubuntu-latest
-    timeout-minutes: 25
-    strategy:
-      fail-fast: false
-      matrix:
-        project: [webkit, firefox, chromium]
-    steps:
-      - name: echo success!
-        run: echo 'hello'
+# jobs:
+#   regression:
+#     runs-on: ubuntu-latest
+#     timeout-minutes: 25
+#     strategy:
+#       fail-fast: false
+#       matrix:
+#         project: [webkit, firefox, chromium]
+#     steps:
+#       - name: echo success!
+#         run: echo 'hello'
