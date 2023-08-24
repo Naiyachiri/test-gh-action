@@ -4,8 +4,8 @@ name: Nightly Regression Test against Stage
 
 on:
   schedule:
-    # every 30 minutes
-    - cron: '*/30 10 * * *'
+    # every 30 minutes at 10am (RUNS AGAINST UTC)
+    - cron: '45 14 * * *'
 
 jobs:
   regression:
