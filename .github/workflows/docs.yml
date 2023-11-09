@@ -1,9 +1,11 @@
 name: Documents Build Exception
 
 on:
-  push:
+  pull_request:
+    types: [opened, synchronize, reopened]
     paths:
-      - '**/**.md'
+      - 'docs/**'
+      - '**.md'
 
 jobs:
   docs-only:
